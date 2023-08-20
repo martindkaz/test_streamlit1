@@ -6,4 +6,6 @@ for msg in st.session_state["msgs"]:
 if prompt := st.chat_input(placeholder="enter message"):
     st.session_state["msgs"].append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
+    st.chat_message("assistant").write("answer")
 
+st.chat_message("assistant").write("add on message")
